@@ -1,0 +1,323 @@
+CSC 4233 NLP — Mid-Term Project Guideline, Fall 2026-27  |  Page 1 
+ 
+AMERICAN INTERNATIONAL UNIVERSITY-BANGLADESH (AIUB) 
+Faculty of Science and Technology (FST) 
+Department of Computer Science (CS)  |  Undergraduate Program 
+ 
+CSC 4233 Natural Language Processing [Section: B] 
+Mid-Term Project Guideline 
+Fall 2026-27  |  Released: 12 October 2026   
+At a glance  
+Team 3–4 members per group, or individual 
+Task End-to-end text classification system (English and/or Bangla) using Weeks 
+1–5 techniques 
+Course outcome CO2 — PO-a4.C3 (20 of the 40 mid-term marks) 
+Group information due Wednesday, 14 October 2026, 11:59 PM 
+Final submission due Thursday, 5 November 2026, 11:59 PM 
+Viva Mid-term exam week, 8–15 November 2026 
+ 
+1. Key Dates 
+Group information is submitted on the course MS Teams team. After 14 October,  I will create a separate 
+MS Teams group for each project group (and for each individual student); all later documents are 
+submitted there. 
+Milestone Deadline Week What is due 
+M1 — Group 
+information Wed, 14 Oct 2026 Week 3 Group form (Section 2); one submission 
+per group, by any one member  
+M2 — Project proposal Thu, 22 Oct 2026 Week 4 One-page proposal: problem, dataset, 
+planned methods, roles 
+Topic approval Mon, 26 Oct 2026 Week 5 feedback; approved, or revise and 
+resubmit within 2 days 
+M3 — Progress check 1–5 Nov 2026 
+(consulting hours) Week 6 Show EDA, preprocessing pipeline and 
+one working baseline 
+M4 — Final submission Thu, 5 Nov 2026 Week 6 Code, report, contribution statement 
+(Section 5) 
+Viva schedule 
+published Thu, 5 Nov 2026 Week 6 Individual slot posted on MS Teams 
+M5 — Mid-term viva 8–15 Nov 2026 
+Week 7 (Mid-
+term exam 
+week) 
+Individual (Section 7) 
+ 
+
+CSC 4233 NLP — Mid-Term Project Guideline, Fall 2026-27  |  Page 2 
+2. Group Formation and Group Information (Due 14 October) 
+Form groups of 3–4 students, or work individually. Groups of 2 or more than 4 members need my prior 
+approval. There is no designated group leader; all members share equal responsibility. Individual students 
+submit the same form and follow the same requirements and deadlines. Students who have neither formed 
+a group nor registered as individuals by 14 October will be assigned to a group by me. 
+Group numbers (G01, G02, …) will be assigned after the deadline and must be used in every file name. I will 
+then create an MS Teams group for each project group, where you submit all later documents. Group 
+membership is frozen after 14 October; a later change needs written approval and is granted only in 
+exceptional cases (for example, a member dropping the course). 
+3. Project Task and Technical Requirements 
+Your task is to solve one real text classification problem (binary or multi -class) and show, with evidence, 
+which preprocessing, representation and classifier choices work best for it. The project assesses CO2: Apply 
+a t ext preprocessing pipeline, statistical language models, word representations (BoW, TF -IDF, 
+embeddings), and appropriate evaluation metrics to solve text -analytics problems on real -world 
+English/Bangla data (PO-a4.C3). 
+Scope. Use only the techniques covere d in Weeks 1 –5: regular expressions, preprocessing, Bag of Words, 
+TF-IDF, Naive Bayes and other classical classifiers, and word embeddings. Transformer models (BERT, GPT 
+and similar) are not allowed in the mid-term project; they belong to the final-term project (CO4). 
+Every project must include the following components. 
+1. Problem and dataset 
+– A clearly stated classification problem with a real-world use case. 
+– At least 2,000 labelled documents and at least 2 classes, in English, Bangla or both. Bangla 
+datasets are encouraged. 
+– Cite the dataset source and confirm its licence allows academic use. 
+2. Exploratory data analysis (EDA) 
+– Class distribution (state whether the data is imbalanced), document -length statistics, and the 
+most frequent words per class before and after preprocessing. 
+– At least three figures, each with a one-line interpretation. 
+3. Preprocessing pipeline 
+– Implement it as a reusable function and justify each step: cleaning with regular expressions 
+(URLs, emojis, numbers, HTML), tokenisation, case folding (En glish), punctuation and stop-word 
+removal, stemming and/or lemmatisation. 
+– For Bangla, handle Unicode normalisation and use a Bangla -specific tokeniser and stop -word 
+list; discuss the limitations of stemming in Bangla. 
+– Run an ablation: compare at least two pipeline variants (e.g., with vs without stop -word 
+removal, or stemming vs lemmatisation) and report their effect on macro-F1. 
+4. Text representations (all three are required) 
+– Bag of Words (count vectors). 
+– TF-IDF, including at least one n-gram setting (e.g., unigram vs unigram + bigram). 
+– Word embeddings: average Word2Vec vectors trained on your corpus, or pretrained 
+FastText/GloVe vectors (FastText provides Bangla vectors). 
+5. Classifiers 
+– A majority-class baseline. 
+– Multinomial Naive Bayes on BoW and TF-IDF (required). 
+CSC 4233 NLP — Mid-Term Project Guideline, Fall 2026-27  |  Page 3 
+– One more classical classifier applied to all three representations: Logistic Regression or Linear 
+SVM. Use Logistic Regression or Gaussian Naive Bayes for embeddings, since Multinomial Naive 
+Bayes cannot take negative feature values. 
+– Tune at least on e hyperparameter per model on the validation set (e.g., Laplace smoothing 
+alpha, C, max_features). 
+– Justify your choice of representations and classifiers for your problem, data and language, and 
+explain what the comparison shows. 
+6. Evaluation protocol 
+– Stratified train / validation / test split (70/15/15) or stratified 5-fold cross-validation, with a fixed 
+random seed. 
+– Fit vectorisers and tune hyperparameters on training/validation data only; touch the test set 
+once, at the end. 
+– Report accuracy, macro-precision, macro-recall and macro-F1 for every model, plus a confusion 
+matrix for the best model. Macro-F1 is the primary metric. 
+– Present results in one comparison table: rows = representation + classifier, columns = metrics. 
+7. Error analysis and interpretation 
+– List the 10 most informative words per class from Naive Bayes (log-probability ratio). 
+– Inspect at least 20 misclassified test examples and group them into error types (sarcasm, 
+negation, code-mixed Banglish, label noise, etc.). 
+8. Code documentation and explanation 
+– Organise the notebook into clearly titled sections (EDA, preprocessing, representations, models, 
+evaluation, error analysis). Before each code cell or block, add a Markdown cell explaining what 
+it does and why; comment the key lines. Every memb er must be able to explain any cell in the 
+viva. 
+9. Colab-ready notebook (no dependencies) 
+– Submit the code as a single .ipynb notebook that runs top to bottom on Google Colab (Runtime 
+→ Run all) with no manual setup: no local files, no file uploads, no separate requirements file. 
+– Load the dataset inside the notebook from a public Google Drive or GitHub link; a dataset found 
+on Kaggle, Hugging Face or UCI must be hosted on Google Drive or GitHub first. If a library is not 
+preinstalled on Colab, install it with a pip cell at the top of the notebook. Fix random seeds so 
+results can be reproduced. 
+4. Suggested Topics and Datasets 
+Pick one of these or propose your own. Each topic can be taken by at most two groups, approved first 
+come, first served at proposal time.  Search for the datasets on Kaggle, Hugging Face Datasets or the UCI 
+repository, and check the size and licence before proposing. 
+# Topic Language Suggested public dataset Classes 
+1 Noisy social-media 
+sentiment Bangla SentNoB (Islam et al., 2021) 3 
+2 Book / product review 
+sentiment Bangla BanglaBook (Kabir et al., 2023) 3 
+3 Hate speech detection Bangla Bengali Hate Speech dataset (Romim et al., 
+2021) 2 or more 
+4 Fake news detection Bangla BanFakeNews (Hossain et al., 2020) 2 
+5 News category 
+classification Bangla A Bangla news-category corpus from Kaggle 
+/ Hugging Face 5+ 
+CSC 4233 NLP — Mid-Term Project Guideline, Fall 2026-27  |  Page 4 
+# Topic Language Suggested public dataset Classes 
+6 SMS spam filtering English SMS Spam Collection (UCI) 2 
+7 Movie review sentiment English IMDB Large Movie Review (Maas et al., 
+2011) 2 
+8 News topic classification English AG News or BBC News 4–5 
+9 Offensive / hate speech in 
+tweets English Davidson et al. (2017) hate speech dataset 3 
+10 Own dataset Any Collected and labelled by the group 2+ 
+For an own dataset (topic 10), the proposal must describe the collection source, written labelling 
+guidelines, and how at least 200 items were double -annotated to measure agreement (Cohen's kappa). 
+Remove personal information (names, phone numbers, user handles) before use. Very large datasets (e.g., 
+IMDB) may be stratified-sampled down to a manageable size; report the sampling in the report. 
+5. Deliverables and Submission Format 
+M2 — Proposal (one page, PDF). Project title; problem statement and use case; dataset (link, size, classes, 
+class balance); planned pipeline and models; risks; and each member's planned role. File name: 
+CSC4233_SecB_G<NN>_Proposal.pdf. 
+M4 — Final submission. Any one member (or the individual student) uploads one ZIP file to your MS Teams 
+group, named CSC4233_SecB_G<NN>_Midterm.zip containing: 
+Item Format Requirement 
+Source code .ipynb (Colab 
+notebook) 
+One self-contained notebook that runs top to bottom on 
+Colab without any setup, with all outputs saved; 
+documented as described in Section 3 
+Dataset Public link only Read by the notebook directly from a public Google Drive 
+or GitHub link; the data file itself is not required in the ZIP 
+Report PDF Maximum 10 pages, IEEE conference template, structure in 
+Section 6 
+Contribution 
+statement Report appendix 
+Table of each member's tasks and percentage contribution, 
+signed off by all members (not needed for individual 
+projects) 
+Put the shareable Colab link of the notebook (view access for me) on the first page of the report. 
+6. Report Structure 
+Use the IEEE two -column conference template (Word or LaTeX/Overleaf), maximum 10 pages excluding 
+references and appendices. 
+1. Title, group number, members and IDs 
+2. Abstract (150–200 words): problem, data, best method, best macro-F1. 
+3. Introduction: the problem, why it matters, and your contributions. 
+4. Related work: at least 3 cited papers or prior systems on the same task or dataset. 
+5. Dataset and EDA: source, size, classes, splits and key figures. 
+6. Methodology: preprocessing pipeline (with a pipeline diagram), representations, classifiers and 
+hyperparameter search. 
+7. Experimental setup: split or cross-validation protocol, seeds, metrics, tools and library versions. 
+CSC 4233 NLP — Mid-Term Project Guideline, Fall 2026-27  |  Page 5 
+8. Results: the comp arison table, the preprocessing ablation and the confusion matrix of the best 
+model. 
+9. Error analysis and discussion: informative features, error categories, and what the results imply. 
+10. Limitations and future work: including what you would try in the final -term project with transformer 
+models. 
+11. Conclusion 
+12. References: IEEE citation style. 
+13. Appendix: contribution statement and AI-use statement (Section 8). 
+7. Mid-Term Viva (8–15 November, Mid-Term Exam Week) 
+Each student is examined individually in a 7 -minute slot during mid -term exam week, including students 
+who worked in a group. Individual slots will be posted on MS Teams by 5 November. 
+Part Time What happens 
+Project walkthrough 2 min Briefly explain the problem, pipeline, key results and your own 
+contribution 
+Code explanation and 
+run 2 min 
+I run your submitted notebook on Colab; you explain the code cells 
+I select. I may ask you to change a cell or test the model on new 
+input 
+Questioning 3 min Questions on any part of the project (not only your own part) and 
+on related Weeks 1–5 concepts 
+Rules for the viva: 
+• Be present 10 minutes before your slot. You do not need to bring a laptop; I will run your submitted 
+notebook on Colab on my laptop. 
+• You may be asked to explain or modify any part of the code . Your viva sets your individual viva factor 
+(Section 9), so members of the same group may receive different marks. 
+• A student absent from the viva without an officially accepted reason receives a viva factor of 0, i.e. no 
+marks for the project. 
+• Slot swaps are allowed only between two students by mutual agreement, emailed to me at least 24 
+hours before. 
+8. Academic Integrity, AI Use and Late Submission 
+• Original work.  Code, text and figures must be your own. Any code adapted from tutorials, Kaggle 
+notebooks or GitHub must be cited in a comment at the point of use and in the report. Plagiarism or 
+copied projects are handled under AIUB's academic-integrity policy and receive zero for the project. 
+• AI tools. You may use AI assistants (ChatGPT, Claude, Copilot and similar) for learning, debugging and 
+language editing. Add an AI-use statement in the appendix naming the tool and what it was used for. 
+You remain responsible for every line, and the viva tests whether you understand it. 
+• Results must be real.  Every number in the report must be reproducible from the submitted code. 
+Fabricated or edited results receive zero for the project. 
+• Late submission.  Late submissions are not a ccepted unless I approved an extension before the 
+deadline for a documented reason. 
+• Questions. Ask during class, in consulting hours (Room 9408 I, Sunday –Thursday; message on MS 
+Teams first), or in the course MS Teams channel. 
+CSC 4233 NLP — Mid-Term Project Guideline, Fall 2026-27  |  Page 6 
+9. Evaluation 
+The project, report and viva together form the project component of the mid-term grade: 20 of the 40 mid-
+term marks, mapped to CO2 (PO-a4.C3). The group submission is marked out of 20 with the rubric below, 
+taken from the course outline. 
+Criteria (Marks) Missing / 
+Incorrect Inadequate Satisfactory Excellent 
+Preprocessing 
+pipeline 
+(6 marks) 
+0 
+No pipeline, or a 
+pipeline 
+inappropriate 
+for the data. 
+1–2 
+Generic steps 
+applied without 
+considering the 
+data or language. 
+3–4 
+A suitable pipeline 
+with minor gaps; 
+most steps justified. 
+5–6 
+A complete, data- and 
+language-appropriate 
+pipeline; every step 
+justified and its effect 
+demonstrated. 
+Representation 
+and modelling 
+(8 marks) 
+0 
+Not 
+implemented, or 
+the code does 
+not run. 
+1–3 
+Only one 
+representation, 
+implemented with 
+major errors or no 
+justification. 
+4–6 
+At least two 
+representations 
+implemented 
+correctly and 
+compared, with 
+minor issues. 
+7–8 
+Representations and 
+model chosen with 
+justification, 
+implemented correctly 
+and compared 
+systematically. 
+Evaluation and 
+interpretation 
+(6 marks) 
+0 
+No evaluation. 
+1–2 
+Inappropriate 
+metrics or no held-
+out test data. 
+3–4 
+Appropriate metrics 
+on a proper 
+train/test split, with 
+limited 
+interpretation. 
+5–6 
+Appropriate metrics, 
+baseline comparison, 
+error analysis and 
+well-supported 
+conclusions. 
+Individual moderation through viva. The viva is not a separate criterion. I first score the group submission 
+on each criterion above. In the viva (Section 7), each me mber is asked about the parts of the code and 
+report that relate to each criterion, and their individual mark for that criterion is the group mark multiplied 
+by a viva factor (the group mark is the ceiling): 
+• Factor 1.0: explains the work correctly and confidently, including design choices. 
+• Factor 0.75: explains most of the work, with minor gaps. 
+• Factor 0.5: explains only parts of the work, with major gaps. 
+• Factor 0.25: cannot explain the work meaningfully. 
+How the other requirements are counted. Every component in Section 3 is evidence for one of the three 
+criteria: 
+• Preprocessing pipeline: EDA (component 2), the pipeline and its justification, Bangla-specific handling 
+and the ablation (component 3). 
+• Representation and modelling: the three representations, the classifiers, tuning and the justification 
+of your choices (components 4–5), and the Colab notebook (components 8 –9). A notebook that does 
+not run on Colab scores 0 on this criterion. 
+• Evaluation and interpretation: the evaluation protocol, comparison table, confusion matrix and error 
+analysis (components 6–7), and the discussion and conclusions in the report (Section 6). 
+* The faculty reserves the right to change, amend, add or delete any of the contents with prior notice. 

@@ -1,0 +1,54 @@
+=== 1. SIZES (source x dialect) ===
+source           BanglaDial  LocalLang  ONUBAD  Vashantor    All
+dialect                                                         
+Barisal                4046        790     980       2500   8316
+Chittagong             8660        577     980       2500  12717
+Kishoreganj            8691          0       0          0   8691
+Mymensingh             3096          0       0       2500   5596
+Narail                 7743          0       0          0   7743
+Narsingdi              5735          0       0          0   5735
+Noakhali               2462          0       0       2500   4962
+Rajshahi                885        891       0          0   1776
+Rangpur                5878        654       0          0   6532
+Standard_Bangla        4403          0       0          0   4403
+Sylhet                 3710        442     980       2500   7632
+Tangail                5410          0       0          0   5410
+All                   60719       3354    2940      12500  79513
+
+=== 2. WITHIN-SOURCE DUPLICATES / LABEL CONFLICTS ===
+BanglaDial  rows= 60719 exact-dup rows(same label)=  735 texts with >1 label=  173 (rows=466)
+LocalLang   rows=  3354 exact-dup rows(same label)=   36 texts with >1 label=    5 (rows=11)
+ONUBAD      rows=  2940 exact-dup rows(same label)=  416 texts with >1 label=   66 (rows=164)
+Vashantor   rows= 12500 exact-dup rows(same label)=   16 texts with >1 label=   44 (rows=89)
+
+=== 3. CROSS-SOURCE OVERLAP (dialect text, normalised) ===
+BanglaDial & LocalLang :  3276 shared texts (5.4% of BanglaDial, 98.4% of LocalLang)
+BanglaDial & ONUBAD    :  2612 shared texts (4.3% of BanglaDial, 99.5% of ONUBAD)
+BanglaDial & Vashantor : 12273 shared texts (20.4% of BanglaDial, 98.6% of Vashantor)
+LocalLang  & ONUBAD    :     2 shared texts (0.1% of LocalLang, 0.1% of ONUBAD)
+LocalLang  & Vashantor :     3 shared texts (0.1% of LocalLang, 0.0% of Vashantor)
+ONUBAD     & Vashantor :   110 shared texts (4.2% of ONUBAD, 0.9% of Vashantor)
+
+=== 4. SHARED STANDARD-BANGLA SENTENCES ACROSS SOURCES ===
+LocalLang  & ONUBAD    :     1 shared standard sentences (of 971 / 915)
+LocalLang  & Vashantor :     3 shared standard sentences (of 971 / 2509)
+ONUBAD     & Vashantor :    91 shared standard sentences (of 915 / 2509)
+
+=== 5. MEANING-LEAKAGE INSIDE VASHANTOR / ONUBAD / LocalLang ===
+(a standard sentence appearing under several dialects; a random row split would put
+ the same meaning in train and test)
+Vashantor  unique standard sentences= 2509, appearing under >=2 dialects= 2501
+ONUBAD     unique standard sentences=  915, appearing under >=2 dialects=  915
+LocalLang  unique standard sentences=  971, appearing under >=2 dialects=  766
+
+=== 6. CLASSIFICATION: random split vs cross-source ===
+BanglaDial -> BanglaDial (random split, 4 dialects)     acc=0.935 macroF1=0.920  (train=15080, test=3771)
+BanglaDial -> Vashantor (cross-source) [overlap removed: 9770] acc=0.626 macroF1=0.495  (train=9081, test=211)
+BanglaDial -> ONUBAD (cross-source) [overlap removed: 2518] acc=0.480 macroF1=0.355  (train=16333, test=179)
+Vashantor -> Vashantor (random row split)               acc=0.945 macroF1=0.945  (train=7984, test=1996)
+Vashantor -> Vashantor (meaning-grouped split)          acc=0.939 macroF1=0.939  (train=7981, test=1999)
+Vashantor -> BanglaDial (cross-source) [overlap removed: 9770] acc=0.145 macroF1=0.083  (train=210, test=9102)
+
+=== 7. SHORTCUT CHECK on BanglaDial (12 classes) ===
+full text char n-gram            acc=0.792
+length-only features (no content) acc=0.164  (majority-class baseline=0.143)
