@@ -1,0 +1,24 @@
+{"source": "Kaggle T4 run of part11_translation.py (account arnob2224, notebook notebooke77f098955), 2026-11-04; 120 test sentences, 10 per class (seed 42); Qwen2.5-7B-Instruct base model, greedy decoding",
+"status": "FIRST-PASS RATINGS by the assistant; must be verified by a native Bangla speaker before use in the paper",
+"scale": "C = meaning fully conveyed, P = partly conveyed (gist or key words right, some meaning lost or wrong), W = wrong, untranslated or hallucinated",
+"ratings": {
+"Barisal":         {"ids": [1,2,3,4,5,6,7,8,9,10],          "r": ["W","P","W","C","P","C","W","P","P","W"]},
+"Chittagong":      {"ids": [11,12,13,14,15,16,17,18,19,20], "r": ["W","P","W","W","W","W","W","W","P","C"]},
+"Kishoreganj":     {"ids": [21,22,23,24,25,26,27,28,29,30], "r": ["P","W","P","P","P","P","W","W","W","W"]},
+"Mymensingh":      {"ids": [31,32,33,34,35,36,37,38,39,40], "r": ["P","W","W","W","W","W","C","P","P","W"]},
+"Narail":          {"ids": [41,42,43,44,45,46,47,48,49,50], "r": ["W","W","W","W","W","C","C","P","P","W"]},
+"Narsingdi":       {"ids": [51,52,53,54,55,56,57,58,59,60], "r": ["P","C","W","W","P","W","C","C","C","P"]},
+"Noakhali":        {"ids": [61,62,63,64,65,66,67,68,69,70], "r": ["P","W","W","P","W","W","W","W","W","P"]},
+"Rajshahi":        {"ids": [71,72,73,74,75,76,77,78,79,80], "r": ["W","W","W","P","W","W","W","W","C","P"]},
+"Rangpur":         {"ids": [81,82,83,84,85,86,87,88,89,90], "r": ["P","W","W","C","P","W","C","W","W","W"]},
+"Standard_Bangla": {"ids": [91,92,93,94,95,96,97,98,99,100], "r": ["C","C","P","C","C","P","C","C","C","P"]},
+"Sylhet":          {"ids": [101,102,103,104,105,106,107,108,109,110], "r": ["W","W","P","P","P","P","C","C","C","P"]},
+"Tangail":         {"ids": [111,112,113,114,115,116,117,118,119,120], "r": ["W","W","W","P","W","W","W","C","P","W"]}
+},
+"error_patterns": {
+"transliteration_instead_of_translation": [1, 16, 28, 111],
+"dialect_word_read_as_name_or_place": {"5": "হরি (do) -> Hari", "33": "আফনেরে (you) -> Afghanistan", "36": "আফনের (your) -> Afghan's", "83": "ক্যা (why) -> Keynes", "104": "কিতা (what) -> Kita", "77": "ক্ষেইপ্যা (angry) -> Kshipa"},
+"dialect_pronoun_misread": {"14": "আরে (me) -> it", "62": "দেই ন (did not see) -> do not give", "93": "আব্বু আম্মু (father, mother) -> uncle, aunt"},
+"echoed_or_off_task_output": [30, 67, 86]
+}
+}

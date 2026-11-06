@@ -1,0 +1,9 @@
+{"source": "Kaggle run of part14_perclass_qlora_full.py step (b): QLoRA of Qwen2.5-7B-Instruct on all 41,916 training sentences, 1 epoch, T4",
+"labels": ["Barisal", "Chittagong", "Kishoreganj", "Mymensingh", "Narail", "Narsingdi", "Noakhali", "Rajshahi", "Rangpur", "Standard_Bangla", "Sylhet", "Tangail"],
+"n_train": 41916, "epochs": 1, "lr": 0.0001, "eff_batch": 16, "r": 16, "prompt": "short (no option list)", "best_step": 2500,
+"val600_hist": [[500, 0.4294], [1000, 0.6037], [1500, 0.6803], [2000, 0.7443], [2500, 0.7673], [2619, 0.7612]],
+"train_loss_hist": [[100, 3.147], [500, 1.629], [1000, 1.198], [1500, 0.925], [2000, 0.822], [2500, 0.732], [2600, 0.765]],
+"train_secs": 16915, "test_secs": 1116,
+"test": {"accuracy": 0.7282, "macro_F1": 0.7209}, "subset1200": {"accuracy": 0.7167, "macro_F1": 0.7153},
+"f1": [0.813, 0.897, 0.661, 0.715, 0.762, 0.548, 0.774, 0.614, 0.695, 0.842, 0.798, 0.531],
+"pred_dist": {"Barisal": 556, "Chittagong": 1259, "Kishoreganj": 1408, "Mymensingh": 484, "Narail": 1113, "Narsingdi": 662, "Noakhali": 384, "Rajshahi": 95, "Rangpur": 861, "Standard_Bangla": 760, "Sylhet": 525, "Tangail": 875}}

@@ -1,0 +1,1068 @@
+{
+"source": "Colab T4 run of BanglaDialect_Transformers.ipynb (= colab.zip notebook, commit ab8b8c5), finished 2026-11-01 02:55",
+"res": [
+{
+"representation": "TF-IDF char (1,4)",
+"classifier": "Linear SVM",
+"best setting": "1.0",
+"val macro-F1": 0.7963,
+"accuracy": 0.7926,
+"macro-P": 0.7786,
+"macro-R": 0.7859,
+"test macro-F1": 0.7813
+},
+{
+"representation": "TF-IDF char (1,4)",
+"classifier": "Logistic Regression",
+"best setting": "10.0",
+"val macro-F1": 0.7898,
+"accuracy": 0.7847,
+"macro-P": 0.7777,
+"macro-R": 0.7797,
+"test macro-F1": 0.7775
+},
+{
+"representation": "TF-IDF char (1,4)",
+"classifier": "Multinomial NB",
+"best setting": "0.05",
+"val macro-F1": 0.7704,
+"accuracy": 0.7753,
+"macro-P": 0.7729,
+"macro-R": 0.7482,
+"test macro-F1": 0.7565
+},
+{
+"representation": "fine-tuned transformer",
+"classifier": "BanglishBERT",
+"best setting": "lr=3e-05, epoch 4",
+"val macro-F1": 0.7751,
+"accuracy": 0.7558,
+"macro-P": 0.7468,
+"macro-R": 0.7698,
+"test macro-F1": 0.7562
+},
+{
+"representation": "BoW",
+"classifier": "Multinomial NB",
+"best setting": "0.2",
+"val macro-F1": 0.7636,
+"accuracy": 0.7693,
+"macro-P": 0.7732,
+"macro-R": 0.7463,
+"test macro-F1": 0.7554
+},
+{
+"representation": "TF-IDF word (1,1)",
+"classifier": "Multinomial NB",
+"best setting": "0.05",
+"val macro-F1": 0.7602,
+"accuracy": 0.7645,
+"macro-P": 0.7795,
+"macro-R": 0.7331,
+"test macro-F1": 0.7488
+},
+{
+"representation": "TF-IDF word (1,1)",
+"classifier": "Linear SVM",
+"best setting": "1.0",
+"val macro-F1": 0.752,
+"accuracy": 0.7573,
+"macro-P": 0.7356,
+"macro-R": 0.7503,
+"test macro-F1": 0.7415
+},
+{
+"representation": "TF-IDF word (1,1)",
+"classifier": "Logistic Regression",
+"best setting": "10.0",
+"val macro-F1": 0.7471,
+"accuracy": 0.7531,
+"macro-P": 0.7337,
+"macro-R": 0.7449,
+"test macro-F1": 0.7382
+},
+{
+"representation": "fine-tuned transformer",
+"classifier": "XLM-R base",
+"best setting": "lr=3e-05, epoch 4",
+"val macro-F1": 0.7412,
+"accuracy": 0.7328,
+"macro-P": 0.7241,
+"macro-R": 0.7563,
+"test macro-F1": 0.7373
+},
+{
+"representation": "fine-tuned transformer",
+"classifier": "BanglaBERT",
+"best setting": "lr=3e-05, epoch 4",
+"val macro-F1": 0.7487,
+"accuracy": 0.7306,
+"macro-P": 0.728,
+"macro-R": 0.7491,
+"test macro-F1": 0.7362
+},
+{
+"representation": "TF-IDF word (1,2)",
+"classifier": "Linear SVM",
+"best setting": "1.0",
+"val macro-F1": 0.7505,
+"accuracy": 0.7502,
+"macro-P": 0.7294,
+"macro-R": 0.7393,
+"test macro-F1": 0.7336
+},
+{
+"representation": "TF-IDF word (1,2)",
+"classifier": "Multinomial NB",
+"best setting": "0.05",
+"val macro-F1": 0.7447,
+"accuracy": 0.7585,
+"macro-P": 0.7625,
+"macro-R": 0.7184,
+"test macro-F1": 0.7329
+},
+{
+"representation": "BoW",
+"classifier": "Linear SVM",
+"best setting": "0.1",
+"val macro-F1": 0.7418,
+"accuracy": 0.7464,
+"macro-P": 0.7272,
+"macro-R": 0.7409,
+"test macro-F1": 0.732
+},
+{
+"representation": "TF-IDF word (1,2)",
+"classifier": "Logistic Regression",
+"best setting": "10.0",
+"val macro-F1": 0.7503,
+"accuracy": 0.7478,
+"macro-P": 0.729,
+"macro-R": 0.7359,
+"test macro-F1": 0.7316
+},
+{
+"representation": "BoW",
+"classifier": "Logistic Regression",
+"best setting": "1.0",
+"val macro-F1": 0.7334,
+"accuracy": 0.7347,
+"macro-P": 0.7181,
+"macro-R": 0.7279,
+"test macro-F1": 0.7208
+},
+{
+"representation": "Word2Vec avg",
+"classifier": "Logistic Regression",
+"best setting": "10.0",
+"val macro-F1": 0.5994,
+"accuracy": 0.6224,
+"macro-P": 0.587,
+"macro-R": 0.6119,
+"test macro-F1": 0.5913
+},
+{
+"representation": "Word2Vec avg",
+"classifier": "Linear SVM",
+"best setting": "1.0",
+"val macro-F1": 0.5801,
+"accuracy": 0.6217,
+"macro-P": 0.5732,
+"macro-R": 0.59,
+"test macro-F1": 0.5746
+},
+{
+"representation": "Word2Vec avg",
+"classifier": "Gaussian NB",
+"best setting": "1e-09",
+"val macro-F1": 0.5186,
+"accuracy": 0.5522,
+"macro-P": 0.5194,
+"macro-R": 0.5252,
+"test macro-F1": 0.5118
+},
+{
+"representation": "-",
+"classifier": "Majority class",
+"best setting": "-",
+"val macro-F1": 0.0209,
+"accuracy": 0.1438,
+"macro-P": 0.012,
+"macro-R": 0.0833,
+"test macro-F1": 0.021
+}
+],
+"hist": {
+"BanglaBERT": [
+{
+"epoch": 1,
+"train loss": 1.7741,
+"val macro-F1": 0.5399
+},
+{
+"epoch": 2,
+"train loss": 0.9555,
+"val macro-F1": 0.6851
+},
+{
+"epoch": 3,
+"train loss": 0.6194,
+"val macro-F1": 0.7276
+},
+{
+"epoch": 4,
+"train loss": 0.4445,
+"val macro-F1": 0.7487
+}
+],
+"BanglishBERT": [
+{
+"epoch": 1,
+"train loss": 1.6501,
+"val macro-F1": 0.6267
+},
+{
+"epoch": 2,
+"train loss": 0.8357,
+"val macro-F1": 0.7269
+},
+{
+"epoch": 3,
+"train loss": 0.5266,
+"val macro-F1": 0.7599
+},
+{
+"epoch": 4,
+"train loss": 0.3536,
+"val macro-F1": 0.7751
+}
+],
+"XLM-R base": [
+{
+"epoch": 1,
+"train loss": 1.8497,
+"val macro-F1": 0.556
+},
+{
+"epoch": 2,
+"train loss": 1.0309,
+"val macro-F1": 0.6799
+},
+{
+"epoch": 3,
+"train loss": 0.7436,
+"val macro-F1": 0.7276
+},
+{
+"epoch": 4,
+"train loss": 0.5775,
+"val macro-F1": 0.7412
+}
+]
+},
+"abl": [
+{
+"variant": "A tokens only",
+"vocabulary": 38504,
+"NB macro-F1": 0.7442,
+"SVM macro-F1": 0.7491,
+"mean macro-F1": 0.7466,
+"change vs A": 0
+},
+{
+"variant": "B + stop-words removed",
+"vocabulary": 28987,
+"NB macro-F1": 0.7239,
+"SVM macro-F1": 0.7237,
+"mean macro-F1": 0.7238,
+"change vs A": -0.0228
+},
+{
+"variant": "C + stemming",
+"vocabulary": 37614,
+"NB macro-F1": 0.738,
+"SVM macro-F1": 0.7458,
+"mean macro-F1": 0.7419,
+"change vs A": -0.0047
+},
+{
+"variant": "D + stop-words + stemming",
+"vocabulary": 28065,
+"NB macro-F1": 0.7155,
+"SVM macro-F1": 0.7194,
+"mean macro-F1": 0.7175,
+"change vs A": -0.0292
+},
+{
+"variant": "E digits kept as NUM",
+"vocabulary": 38534,
+"NB macro-F1": 0.7451,
+"SVM macro-F1": 0.749,
+"mean macro-F1": 0.747,
+"change vs A": 0.0004
+}
+],
+"cv": [
+{
+"representation": "TF-IDF char (1,4)",
+"classifier": "Linear SVM",
+"mean": 0.8084,
+"std": 0.0037,
+"acc": 0.8158
+},
+{
+"representation": "TF-IDF char (1,4)",
+"classifier": "Logistic Regression",
+"mean": 0.8006,
+"std": 0.0031,
+"acc": 0.8062
+},
+{
+"representation": "TF-IDF char (1,4)",
+"classifier": "Multinomial NB",
+"mean": 0.7735,
+"std": 0.0072,
+"acc": 0.7895
+},
+{
+"representation": "BoW",
+"classifier": "Multinomial NB",
+"mean": 0.7713,
+"std": 0.0057,
+"acc": 0.7846
+},
+{
+"representation": "TF-IDF word (1,1)",
+"classifier": "Multinomial NB",
+"mean": 0.7671,
+"std": 0.0056,
+"acc": 0.782
+},
+{
+"representation": "TF-IDF word (1,1)",
+"classifier": "Linear SVM",
+"mean": 0.7593,
+"std": 0.0052,
+"acc": 0.7758
+},
+{
+"representation": "TF-IDF word (1,2)",
+"classifier": "Linear SVM",
+"mean": 0.7582,
+"std": 0.0042,
+"acc": 0.7751
+},
+{
+"representation": "TF-IDF word (1,2)",
+"classifier": "Logistic Regression",
+"mean": 0.7571,
+"std": 0.0051,
+"acc": 0.7713
+},
+{
+"representation": "TF-IDF word (1,1)",
+"classifier": "Logistic Regression",
+"mean": 0.7561,
+"std": 0.006,
+"acc": 0.7704
+},
+{
+"representation": "BoW",
+"classifier": "Linear SVM",
+"mean": 0.7519,
+"std": 0.0071,
+"acc": 0.7658
+},
+{
+"representation": "TF-IDF word (1,2)",
+"classifier": "Multinomial NB",
+"mean": 0.7516,
+"std": 0.0047,
+"acc": 0.7746
+},
+{
+"representation": "BoW",
+"classifier": "Logistic Regression",
+"mean": 0.7422,
+"std": 0.0056,
+"acc": 0.754
+},
+{
+"representation": "Word2Vec avg",
+"classifier": "Logistic Regression",
+"mean": 0.5734,
+"std": 0.0052,
+"acc": 0.6061
+},
+{
+"representation": "Word2Vec avg",
+"classifier": "Linear SVM",
+"mean": 0.5485,
+"std": 0.0018,
+"acc": 0.5999
+},
+{
+"representation": "Word2Vec avg",
+"classifier": "Gaussian NB",
+"mean": 0.4816,
+"std": 0.004,
+"acc": 0.525
+},
+{
+"representation": "-",
+"classifier": "Majority class",
+"mean": 0.0209,
+"std": 0.0,
+"acc": 0.1438
+}
+],
+"labels": [
+"Barisal",
+"Chittagong",
+"Kishoreganj",
+"Mymensingh",
+"Narail",
+"Narsingdi",
+"Noakhali",
+"Rajshahi",
+"Rangpur",
+"Standard_Bangla",
+"Sylhet",
+"Tangail"
+],
+"svm_f1": {
+"Barisal": 0.861,
+"Chittagong": 0.92,
+"Kishoreganj": 0.766,
+"Mymensingh": 0.747,
+"Narail": 0.835,
+"Narsingdi": 0.684,
+"Noakhali": 0.796,
+"Rajshahi": 0.695,
+"Rangpur": 0.769,
+"Standard_Bangla": 0.79,
+"Sylhet": 0.845,
+"Tangail": 0.666
+},
+"svm_pr": {
+"Standard_Bangla": [
+0.721,
+0.874
+]
+},
+"cm": [
+[
+517,
+3,
+10,
+16,
+2,
+6,
+7,
+2,
+8,
+15,
+7,
+9
+],
+[
+4,
+1162,
+18,
+4,
+11,
+13,
+31,
+1,
+15,
+16,
+8,
+9
+],
+[
+11,
+24,
+952,
+30,
+23,
+99,
+7,
+8,
+39,
+27,
+18,
+30
+],
+[
+6,
+0,
+16,
+361,
+3,
+14,
+5,
+4,
+6,
+25,
+16,
+6
+],
+[
+4,
+8,
+43,
+2,
+928,
+36,
+3,
+3,
+32,
+24,
+4,
+56
+],
+[
+5,
+9,
+89,
+23,
+20,
+583,
+7,
+3,
+30,
+21,
+10,
+45
+],
+[
+2,
+16,
+3,
+13,
+1,
+5,
+300,
+1,
+4,
+11,
+5,
+7
+],
+[
+3,
+0,
+3,
+5,
+5,
+1,
+1,
+90,
+7,
+9,
+3,
+6
+],
+[
+16,
+5,
+17,
+9,
+29,
+32,
+5,
+7,
+668,
+23,
+7,
+47
+],
+[
+8,
+1,
+5,
+15,
+10,
+7,
+8,
+0,
+8,
+569,
+6,
+14
+],
+[
+11,
+0,
+6,
+17,
+1,
+13,
+6,
+1,
+5,
+15,
+473,
+5
+],
+[
+12,
+6,
+56,
+9,
+46,
+50,
+6,
+6,
+50,
+34,
+9,
+516
+]
+],
+"pairs": [
+[
+"Kishoreganj",
+"Narsingdi",
+99
+],
+[
+"Narsingdi",
+"Kishoreganj",
+89
+],
+[
+"Narail",
+"Tangail",
+56
+],
+[
+"Tangail",
+"Kishoreganj",
+56
+],
+[
+"Tangail",
+"Narsingdi",
+50
+],
+[
+"Tangail",
+"Rangpur",
+50
+],
+[
+"Rangpur",
+"Tangail",
+47
+],
+[
+"Tangail",
+"Narail",
+46
+],
+[
+"Narsingdi",
+"Tangail",
+45
+],
+[
+"Narail",
+"Kishoreganj",
+43
+]
+],
+"len": [
+[
+"1-2 words",
+945,
+0.58
+],
+[
+"3",
+1178,
+0.7
+],
+[
+"4-5",
+2725,
+0.782
+],
+[
+"6-8",
+2555,
+0.852
+],
+[
+"9+",
+1579,
+0.909
+]
+],
+"oov": [
+0.3644,
+0.7858,
+0.8045
+],
+"err": {
+"A very short (1-3 words)": 750,
+"B involves Standard_Bangla": 225,
+"C frequent neighbour confusion": 311,
+"D other": 577
+},
+"nerr": 1863,
+"agree": {
+"all_correct": 0.571,
+"all_wrong": 0.092,
+"disagree": 0.337,
+"svm_errors_fixed_by_other": 0.559
+},
+"counts": {
+"Chittagong": 8609,
+"Kishoreganj": 8453,
+"Narail": 7624,
+"Rangpur": 5762,
+"Narsingdi": 5633,
+"Tangail": 5333,
+"Standard_Bangla": 4341,
+"Barisal": 4012,
+"Sylhet": 3691,
+"Mymensingh": 3080,
+"Noakhali": 2457,
+"Rajshahi": 885
+},
+"tf_f1": {
+"BanglaBERT": [
+0.817,
+0.896,
+0.626,
+0.765,
+0.751,
+0.518,
+0.796,
+0.689,
+0.687,
+0.89,
+0.82,
+0.578
+],
+"BanglishBERT": [
+0.864,
+0.898,
+0.685,
+0.771,
+0.777,
+0.567,
+0.779,
+0.688,
+0.729,
+0.88,
+0.846,
+0.592
+],
+"XLM-R base": [
+0.827,
+0.888,
+0.651,
+0.75,
+0.738,
+0.555,
+0.805,
+0.709,
+0.707,
+0.85,
+0.805,
+0.563
+]
+},
+"tf_cm": {
+"BanglishBERT": [
+[
+524,
+1,
+8,
+29,
+0,
+3,
+7,
+2,
+4,
+6,
+6,
+12
+],
+[
+6,
+1111,
+33,
+0,
+10,
+26,
+56,
+0,
+17,
+10,
+14,
+9
+],
+[
+17,
+18,
+847,
+29,
+31,
+179,
+6,
+4,
+33,
+10,
+14,
+80
+],
+[
+7,
+0,
+7,
+393,
+0,
+7,
+5,
+11,
+3,
+12,
+14,
+3
+],
+[
+4,
+12,
+49,
+1,
+824,
+47,
+2,
+11,
+74,
+17,
+6,
+96
+],
+[
+3,
+10,
+164,
+29,
+24,
+477,
+6,
+1,
+22,
+17,
+7,
+85
+],
+[
+7,
+14,
+2,
+10,
+0,
+4,
+309,
+0,
+4,
+3,
+15,
+0
+],
+[
+3,
+1,
+1,
+7,
+2,
+1,
+1,
+96,
+5,
+10,
+3,
+3
+],
+[
+15,
+9,
+28,
+8,
+42,
+28,
+10,
+7,
+624,
+12,
+5,
+77
+],
+[
+2,
+0,
+1,
+10,
+4,
+1,
+2,
+1,
+4,
+614,
+1,
+11
+],
+[
+13,
+5,
+5,
+21,
+0,
+6,
+12,
+6,
+2,
+5,
+474,
+4
+],
+[
+10,
+2,
+61,
+21,
+41,
+60,
+9,
+7,
+56,
+29,
+8,
+496
+]
+]
+},
+"words": {
+"Chittagong": "আঁই, আঁর, ইতে, ইবে",
+"Rangpur": "হামার, মোক, একনা, ওটে",
+"Sylhet": "তুমিতাইন, এখটা, তাইন, কিলা",
+"Rajshahi": "এড্যা, হেব্বি, একড্যা, ল্যাগা",
+"Barisal": "বেমালা, এউক্কা, লইজ্ঞা, মোরা",
+"Mymensingh": "কাসে, করতাসে, লাগতাসে, যাইতাসি",
+"Narail": "আমাগে, অচ্ছে, চইলে, মধ্যি",
+"Noakhali": "তুউই, হেতার, আইজগা, হেতাগো",
+"Standard_Bangla": "মেয়েটি, এনেছে, এসেছিল, হারিয়ে",
+"Kishoreganj": "বিডিও, ইন্ডিগো, হইরা, রাজু",
+"Narsingdi": "সালামি, ইত্তা, নরসিংদী, নসুন্দি",
+"Tangail": "নাগবো, এইন্না, নিগা, টাঙ্গাইল"
+},
+"llm": {
+"model": "Qwen/Qwen2.5-7B-Instruct (4-bit NF4)",
+"n_sub": 1200,
+"per_class": 100,
+"shots_per_class": 1,
+"secs": {
+"zero-shot": 391,
+"few-shot": 1084
+},
+"prompt_tokens": {
+"zero-shot": 158,
+"few-shot": 524
+},
+"subset": {
+"char (1,4) + SVM": {
+"accuracy": 0.7925,
+"macro_P": 0.8,
+"macro_R": 0.7925,
+"macro_F1": 0.7922
+},
+"Qwen2.5-7B zero-shot": {
+"accuracy": 0.09,
+"macro_P": 0.0231,
+"macro_R": 0.09,
+"macro_F1": 0.0238
+},
+"Qwen2.5-7B few-shot": {
+"accuracy": 0.1292,
+"macro_P": 0.1115,
+"macro_R": 0.1292,
+"macro_F1": 0.0661
+}
+},
+"f1_sub": {
+"char (1,4) + SVM": [
+0.888,
+0.88,
+0.716,
+0.772,
+0.796,
+0.677,
+0.837,
+0.776,
+0.777,
+0.816,
+0.884,
+0.687
+],
+"Qwen2.5-7B zero-shot": [
+0.033,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.166,
+0.087,
+0.0
+],
+"Qwen2.5-7B few-shot": [
+0.146,
+0.058,
+0.0,
+0.019,
+0.0,
+0.0,
+0.075,
+0.019,
+0.0,
+0.316,
+0.141,
+0.019
+]
+},
+"pred_dist": {
+"zero-shot": {
+"Standard_Bangla": 1081,
+"Sylhet": 84,
+"Barisal": 22,
+"Kishoreganj": 6,
+"Tangail": 2,
+"Mymensingh": 2,
+"Rangpur": 1,
+"Noakhali": 1,
+"Rajshahi": 1
+},
+"few-shot": {
+"Barisal": 612,
+"Standard_Bangla": 387,
+"Sylhet": 99,
+"Chittagong": 39,
+"Noakhali": 33,
+"Kishoreganj": 13,
+"Mymensingh": 8,
+"Tangail": 5,
+"Rajshahi": 3,
+"Narail": 1
+}
+},
+"note": "zero-shot on all 8,982 test sentences was stopped after ~40 min on the T4; both settings were then run on the stratified subset"
+}
+}

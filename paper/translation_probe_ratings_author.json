@@ -1,0 +1,607 @@
+{
+ "source": "Kaggle T4 run of part11_translation.py (notebook notebooke77f098955); outputs in translation_probe_outputs.json",
+ "status": "Rated by one of the authors, a native Bangla speaker (2026-11-05), starting from an AI first pass (column E of Translation_Rating_Sheet.xlsx); 20 of 120 ratings changed by the author; row 13 rated W in chat",
+ "scale": "C = meaning fully conveyed, P = partly conveyed, W = wrong, untranslated or hallucinated",
+ "ratings": {
+  "1": {
+   "class": "Barisal",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "2": {
+   "class": "Barisal",
+   "author": "W",
+   "ai_first_pass": "P"
+  },
+  "3": {
+   "class": "Barisal",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "4": {
+   "class": "Barisal",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "5": {
+   "class": "Barisal",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "6": {
+   "class": "Barisal",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "7": {
+   "class": "Barisal",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "8": {
+   "class": "Barisal",
+   "author": "W",
+   "ai_first_pass": "P"
+  },
+  "9": {
+   "class": "Barisal",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "10": {
+   "class": "Barisal",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "11": {
+   "class": "Chittagong",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "12": {
+   "class": "Chittagong",
+   "author": "W",
+   "ai_first_pass": "P"
+  },
+  "13": {
+   "class": "Chittagong",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "14": {
+   "class": "Chittagong",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "15": {
+   "class": "Chittagong",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "16": {
+   "class": "Chittagong",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "17": {
+   "class": "Chittagong",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "18": {
+   "class": "Chittagong",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "19": {
+   "class": "Chittagong",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "20": {
+   "class": "Chittagong",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "21": {
+   "class": "Kishoreganj",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "22": {
+   "class": "Kishoreganj",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "23": {
+   "class": "Kishoreganj",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "24": {
+   "class": "Kishoreganj",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "25": {
+   "class": "Kishoreganj",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "26": {
+   "class": "Kishoreganj",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "27": {
+   "class": "Kishoreganj",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "28": {
+   "class": "Kishoreganj",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "29": {
+   "class": "Kishoreganj",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "30": {
+   "class": "Kishoreganj",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "31": {
+   "class": "Mymensingh",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "32": {
+   "class": "Mymensingh",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "33": {
+   "class": "Mymensingh",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "34": {
+   "class": "Mymensingh",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "35": {
+   "class": "Mymensingh",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "36": {
+   "class": "Mymensingh",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "37": {
+   "class": "Mymensingh",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "38": {
+   "class": "Mymensingh",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "39": {
+   "class": "Mymensingh",
+   "author": "W",
+   "ai_first_pass": "P"
+  },
+  "40": {
+   "class": "Mymensingh",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "41": {
+   "class": "Narail",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "42": {
+   "class": "Narail",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "43": {
+   "class": "Narail",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "44": {
+   "class": "Narail",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "45": {
+   "class": "Narail",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "46": {
+   "class": "Narail",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "47": {
+   "class": "Narail",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "48": {
+   "class": "Narail",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "49": {
+   "class": "Narail",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "50": {
+   "class": "Narail",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "51": {
+   "class": "Narsingdi",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "52": {
+   "class": "Narsingdi",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "53": {
+   "class": "Narsingdi",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "54": {
+   "class": "Narsingdi",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "55": {
+   "class": "Narsingdi",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "56": {
+   "class": "Narsingdi",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "57": {
+   "class": "Narsingdi",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "58": {
+   "class": "Narsingdi",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "59": {
+   "class": "Narsingdi",
+   "author": "P",
+   "ai_first_pass": "C"
+  },
+  "60": {
+   "class": "Narsingdi",
+   "author": "W",
+   "ai_first_pass": "P"
+  },
+  "61": {
+   "class": "Noakhali",
+   "author": "W",
+   "ai_first_pass": "P"
+  },
+  "62": {
+   "class": "Noakhali",
+   "author": "P",
+   "ai_first_pass": "W"
+  },
+  "63": {
+   "class": "Noakhali",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "64": {
+   "class": "Noakhali",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "65": {
+   "class": "Noakhali",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "66": {
+   "class": "Noakhali",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "67": {
+   "class": "Noakhali",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "68": {
+   "class": "Noakhali",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "69": {
+   "class": "Noakhali",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "70": {
+   "class": "Noakhali",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "71": {
+   "class": "Rajshahi",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "72": {
+   "class": "Rajshahi",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "73": {
+   "class": "Rajshahi",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "74": {
+   "class": "Rajshahi",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "75": {
+   "class": "Rajshahi",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "76": {
+   "class": "Rajshahi",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "77": {
+   "class": "Rajshahi",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "78": {
+   "class": "Rajshahi",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "79": {
+   "class": "Rajshahi",
+   "author": "P",
+   "ai_first_pass": "C"
+  },
+  "80": {
+   "class": "Rajshahi",
+   "author": "C",
+   "ai_first_pass": "P"
+  },
+  "81": {
+   "class": "Rangpur",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "82": {
+   "class": "Rangpur",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "83": {
+   "class": "Rangpur",
+   "author": "P",
+   "ai_first_pass": "W"
+  },
+  "84": {
+   "class": "Rangpur",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "85": {
+   "class": "Rangpur",
+   "author": "C",
+   "ai_first_pass": "P"
+  },
+  "86": {
+   "class": "Rangpur",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "87": {
+   "class": "Rangpur",
+   "author": "P",
+   "ai_first_pass": "C"
+  },
+  "88": {
+   "class": "Rangpur",
+   "author": "C",
+   "ai_first_pass": "W"
+  },
+  "89": {
+   "class": "Rangpur",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "90": {
+   "class": "Rangpur",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "91": {
+   "class": "Standard Bangla",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "92": {
+   "class": "Standard Bangla",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "93": {
+   "class": "Standard Bangla",
+   "author": "C",
+   "ai_first_pass": "P"
+  },
+  "94": {
+   "class": "Standard Bangla",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "95": {
+   "class": "Standard Bangla",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "96": {
+   "class": "Standard Bangla",
+   "author": "C",
+   "ai_first_pass": "P"
+  },
+  "97": {
+   "class": "Standard Bangla",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "98": {
+   "class": "Standard Bangla",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "99": {
+   "class": "Standard Bangla",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "100": {
+   "class": "Standard Bangla",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "101": {
+   "class": "Sylhet",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "102": {
+   "class": "Sylhet",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "103": {
+   "class": "Sylhet",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "104": {
+   "class": "Sylhet",
+   "author": "W",
+   "ai_first_pass": "P"
+  },
+  "105": {
+   "class": "Sylhet",
+   "author": "W",
+   "ai_first_pass": "P"
+  },
+  "106": {
+   "class": "Sylhet",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "107": {
+   "class": "Sylhet",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "108": {
+   "class": "Sylhet",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "109": {
+   "class": "Sylhet",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "110": {
+   "class": "Sylhet",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "111": {
+   "class": "Tangail",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "112": {
+   "class": "Tangail",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "113": {
+   "class": "Tangail",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "114": {
+   "class": "Tangail",
+   "author": "P",
+   "ai_first_pass": "P"
+  },
+  "115": {
+   "class": "Tangail",
+   "author": "P",
+   "ai_first_pass": "W"
+  },
+  "116": {
+   "class": "Tangail",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "117": {
+   "class": "Tangail",
+   "author": "W",
+   "ai_first_pass": "W"
+  },
+  "118": {
+   "class": "Tangail",
+   "author": "C",
+   "ai_first_pass": "C"
+  },
+  "119": {
+   "class": "Tangail",
+   "author": "C",
+   "ai_first_pass": "P"
+  },
+  "120": {
+   "class": "Tangail",
+   "author": "W",
+   "ai_first_pass": "W"
+  }
+ }
+}

@@ -1,0 +1,6 @@
+{"source": "Kaggle run of part14_perclass_qlora_full.py step (a), from the saved test logits of the Part 12 run (3 seeds, up to 15 epochs)",
+"labels": ["Barisal", "Chittagong", "Kishoreganj", "Mymensingh", "Narail", "Narsingdi", "Noakhali", "Rajshahi", "Rangpur", "Standard_Bangla", "Sylhet", "Tangail"],
+"models": {"BanglaBERT": {"n_seeds": 3, "mean": [0.868, 0.911, 0.771, 0.813, 0.814, 0.705, 0.834, 0.743, 0.785, 0.89, 0.87, 0.672], "std": [0.001, 0.001, 0.003, 0.011, 0.002, 0.017, 0.008, 0.01, 0.004, 0.006, 0.004, 0.01]},
+"BanglishBERT": {"n_seeds": 3, "mean": [0.87, 0.903, 0.773, 0.807, 0.811, 0.677, 0.835, 0.744, 0.783, 0.881, 0.868, 0.665], "std": [0.009, 0.003, 0.006, 0.018, 0.004, 0.014, 0.008, 0.035, 0.006, 0.005, 0.004, 0.019]},
+"XLM-R base": {"n_seeds": 3, "mean": [0.85, 0.91, 0.749, 0.776, 0.798, 0.667, 0.835, 0.748, 0.772, 0.867, 0.861, 0.665], "std": [0.006, 0.004, 0.003, 0.017, 0.007, 0.011, 0.011, 0.024, 0.008, 0.006, 0.005, 0.009]}}
+}
